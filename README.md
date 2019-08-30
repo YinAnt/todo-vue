@@ -1,6 +1,6 @@
 # todo-vue
 
-> A Vue.js project
+> A todos project using Vue, Vuex, Router
 
 ## Build Setup
 

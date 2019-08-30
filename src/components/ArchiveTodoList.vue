@@ -1,17 +1,11 @@
 <template>
   <div class="row todoview">
     <div class="todoapp">
-        已归档
-        <span>{{completeSize}}</span>
+      已归档
+      <span>{{completeSize}}</span>
     </div>
-
-    <ul class="no-margn nicescroll todo-list">
-      <todos-item
-        v-for="(value, index) in todoCompletedDataList"
-        :key="index"
-        :data="value"
-        :index="index"
-      ></todos-item>
+    <ul class="no-margn nicescroll todo-list" style="text-align: left;">
+      <li v-for="(value, index) in todoCompletedDataList" :key="index" :data="value" :index="index">{{value.text}}</li>
     </ul>
   </div>
 </template>
@@ -24,7 +18,7 @@ export default {
     TodosItem
   },
   computed: {
-    ...mapGetters(["todoCompletedDataList","completeSize"])
+    ...mapGetters(["todoCompletedDataList", "completeSize"])
   }
 };
 </script>
